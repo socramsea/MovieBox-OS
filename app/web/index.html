@@ -39,34 +39,19 @@
             <p class="eyebrow">Dashboard</p>
             <h1>Media command center</h1>
           </div>
+
           <div class="header-actions">
-            <button class="ghost">Export report</button>
-            <button class="primary">Deploy update</button>
+            <form id="loginForm" class="login-form">
+              <input id="emailInput" type="email" value="admin@moviebox.io" aria-label="Email" />
+              <input id="passwordInput" type="password" value="demo123" aria-label="Password" />
+              <button type="submit" class="primary small">Login</button>
+            </form>
           </div>
         </header>
 
-        <section class="stats">
-          <article class="stat-card accent">
-            <span>Library items</span>
-            <strong>48,274</strong>
-            <small>+12.4% this week</small>
-          </article>
-          <article class="stat-card">
-            <span>Active users</span>
-            <strong>3,281</strong>
-            <small>+9.1% this month</small>
-          </article>
-          <article class="stat-card">
-            <span>Playback sessions</span>
-            <strong>1,432</strong>
-            <small>87% healthy</small>
-          </article>
-          <article class="stat-card">
-            <span>Storage used</span>
-            <strong>2.4 TB</strong>
-            <small>68% capacity</small>
-          </article>
-        </section>
+        <div id="authStatus" class="auth-status"></div>
+
+        <section class="stats" id="statsGrid"></section>
 
         <section class="content-grid">
           <div class="panel wide">
@@ -100,6 +85,13 @@
         <section class="panel lower">
           <div class="panel-header">
             <h2>Library search</h2>
+            <div class="filters">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="movie">Movies</button>
+              <button class="filter-btn" data-category="series">Series</button>
+              <button class="filter-btn" data-category="live">Live</button>
+              <button class="filter-btn" data-category="documentary">Docs</button>
+            </div>
             <input id="searchInput" type="text" placeholder="Search titles, genre, or type" />
           </div>
 
