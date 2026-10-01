@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieBox OS Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <div>
+            <strong>MovieBox</strong>
+            <small>OS</small>
+          </div>
+        </div>
+
+        <nav>
+          <button class="nav active">Overview</button>
+          <button class="nav">Library</button>
+          <button class="nav">Discover</button>
+          <button class="nav">Downloads</button>
+          <button class="nav">Users</button>
+          <button class="nav">Settings</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p>Platform status</p>
+          <span class="status online">Online</span>
+          <small>12 services healthy</small>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1>Media command center</h1>
+          </div>
+          <div class="header-actions">
+            <button class="ghost">Export report</button>
+            <button class="primary">Deploy update</button>
+          </div>
+        </header>
+
+        <section class="stats">
+          <article class="stat-card accent">
+            <span>Library items</span>
+            <strong>48,274</strong>
+            <small>+12.4% this week</small>
+          </article>
+          <article class="stat-card">
+            <span>Active users</span>
+            <strong>3,281</strong>
+            <small>+9.1% this month</small>
+          </article>
+          <article class="stat-card">
+            <span>Playback sessions</span>
+            <strong>1,432</strong>
+            <small>87% healthy</small>
+          </article>
+          <article class="stat-card">
+            <span>Storage used</span>
+            <strong>2.4 TB</strong>
+            <small>68% capacity</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel wide">
+            <div class="panel-header">
+              <h2>Recent media activity</h2>
+              <button class="ghost small">View all</button>
+            </div>
+            <div class="activity-list" id="activityList"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Usage by type</h2>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut-chart">
+                <div class="donut-center">
+                  <strong>73%</strong>
+                  <span>streaming</span>
+                </div>
+              </div>
+              <ul class="legend">
+                <li><span class="dot purple"></span> Movies</li>
+                <li><span class="dot blue"></span> Series</li>
+                <li><span class="dot green"></span> Live TV</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel lower">
+          <div class="panel-header">
+            <h2>Library search</h2>
+            <input id="searchInput" type="text" placeholder="Search titles, genre, or type" />
+          </div>
+
+          <div class="library-grid" id="libraryGrid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
