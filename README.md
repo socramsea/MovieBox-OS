@@ -41,46 +41,36 @@ MovieBox OS is not just a terminal tool. It is a full media platform designed fo
 - Config and environment management
 - Observability and basic monitoring
 
+## Demo
+
+A lightweight web demo is included in `app/web` to showcase the product direction and dashboard style.
+
+### Run the demo
+
+```bash
+chmod +x start-demo.sh
+./start-demo.sh
+```
+
+Then open: http://localhost:3000
+
 ## Project structure
 
 ```text
 moviebox-os/
-├── apps/
-│   ├── api/
-│   ├── web/
-│   └── tui/
-├── packages/
-│   ├── core/
-│   ├── shared/
-│   ├── ui/
-│   └── schemas/
-├── services/
-│   ├── downloader/
-│   ├── metadata/
-│   ├── streamer/
-│   ├── scheduler/
-│   └── notifications/
-├── infra/
-│   ├── docker/
-│   ├── k8s/
-│   └── scripts/
+├── app/
+│   └── web/
+│       ├── index.html
+│       ├── styles.css
+│       └── app.js
 ├── docs/
 │   ├── architecture/
 │   ├── roadmap/
-│   ├── api/
-│   └── onboarding/
-├── .github/
-│   └── workflows/
+│   └── product/
 ├── README.md
-├── CONTRIBUTING.md
 ├── LICENSE
-├── docker-compose.yml
-├── Makefile
-├── .gitignore
-├── .env.example
-├── package.json
-├── Cargo.toml
-└── .nvmrc
+├── start-demo.sh
+└── .gitignore
 ```
 
 ## Tech stack
@@ -127,7 +117,7 @@ moviebox-os/
 
 ## Status
 
-This repository is the foundational product structure for MovieBox OS and is intentionally designed to evolve from a local-first media tool into a scalable platform.
+This repository includes a product foundation and a working web demo prototype to validate the product direction.
 
 ## License
 
