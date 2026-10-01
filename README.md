@@ -2,122 +2,60 @@
 
 MovieBox OS is a modern media platform for discovering, organizing, and streaming movies, series, and live TV content through a flexible local-first architecture.
 
-## Vision
+## Demo MVP
 
-Build a scalable, vendable media platform that combines:
+This repository includes a working MVP that serves a dashboard and exposes a JSON API.
 
-- a terminal-first experience for advanced users
-- a web dashboard for management and access
-- a modular backend for metadata, streaming, downloads, and user management
-- self-hosted and managed deployment options
+### Run locally
 
-## Product positioning
+```bash
+node server.js
+```
 
-MovieBox OS is not just a terminal tool. It is a full media platform designed for:
+Then open:
 
-- personal users
-- family media libraries
-- power users and sysadmins
-- small managed hosting setups
-- future SaaS and white-label expansion
+```text
+http://localhost:3000
+```
 
-## Core goals
+### API
 
-- Discover and organize media efficiently
-- Support local and remote media sources
-- Offer a clean web admin experience
-- Keep the TUI as a technical and power-user interface
-- Provide modular architecture ready for growth
+```text
+GET /api/media
+```
+
+Returns mock media stats, activity, and library entries for dashboard validation.
+
+## Product vision
+
+- media discovery and organization
+- local-first architecture
+- admin dashboard and library management
+- future expansion into self-hosted and SaaS products
 
 ## MVP scope
 
-- User auth and profiles
-- Media library organization
-- Search and filters by title, genre, and type
-- Favorites and watch history
-- Streaming via local external player
-- Download queue and management
-- Admin dashboard for system status
-- Config and environment management
-- Observability and basic monitoring
-
-## Demo
-
-A lightweight web demo is included in `app/web` to showcase the product direction and dashboard style.
-
-### Run the demo
-
-```bash
-chmod +x start-demo.sh
-./start-demo.sh
-```
-
-Then open: http://localhost:3000
-
-## Project structure
-
-```text
-moviebox-os/
-├── app/
-│   └── web/
-│       ├── index.html
-│       ├── styles.css
-│       └── app.js
-├── docs/
-│   ├── architecture/
-│   ├── roadmap/
-│   └── product/
-├── README.md
-├── LICENSE
-├── start-demo.sh
-└── .gitignore
-```
-
-## Tech stack
-
-- Backend: Rust
-- API: REST + WebSockets
-- Web app: Next.js / React
-- TUI: Rust + Ratatui
-- Database: PostgreSQL
-- Cache: Redis
-- Auth: JWT
-- Deployment: Docker / Docker Compose
-- Monitoring: Prometheus + Grafana
-- CI/CD: GitHub Actions
+- dashboard layout
+- library search/filter
+- media stats and activity feed
+- JSON data layer for frontend integration
 
 ## Roadmap
 
-### Phase 1 - Foundation
-- repository and standards
-- architecture baseline
-- env configuration
-- CI/CD setup
-- base auth and app shell
+### Phase 1
+- dashboard and library prototype
+- API-driven data flow
+- product positioning validation
 
-### Phase 2 - MVP
-- library management
-- search and categories
-- favorites/history
-- player integration
-- web dashboard basics
-- admin shell
+### Phase 2
+- real auth and user management
+- richer metadata and filtering
+- media playback integration
 
-### Phase 3 - Pro features
-- premium workflows
-- event-driven jobs
-- richer metadata and integrations
-- hosting and deployment controls
-
-### Phase 4 - Scale
-- SaaS productization
-- multi-user organizations
-- plugin marketplace
-- white-label deployment
-
-## Status
-
-This repository includes a product foundation and a working web demo prototype to validate the product direction.
+### Phase 3
+- downloads and orchestration
+- deployment and monitoring
+- premium features
 
 ## License
 
